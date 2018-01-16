@@ -1,0 +1,106 @@
+<!-- list -->
+<ul class="nav" ng-controller='indexController as index'>
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span>监控中心</span>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.dashboard">
+      <i class="fa fa-tachometer icon  text-info-lter"></i>
+      <span>总览</span>
+    </a>
+  </li>
+
+  <li class="line dk"></li>
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span>应用中心</span>
+  </li>
+  <li>
+    <a ui-sref="app.spaceslist" class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-gift icon text-info-lter"></i>
+      <span class="font-bold" >空间</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li ui-sref-active="active" ng-repeat='item in index.spaceList'>
+        <a ui-sref="app.apps.list({space_id:item.uuid})">
+          <span title="空间{{item.name}}" style="width: 100px;" class="text-ellipsis">空间{{item.name}}</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+
+
+  <li ui-sref-active="active">
+    <a ui-sref="app.projects.list">
+      <i class="glyphicon glyphicon-tasks icon  text-info-lter"></i>
+      <span>DevOps</span>
+    </a>
+  </li>
+
+  <li class="line dk"></li>
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span>交付中心</span>
+  </li>
+
+  <li>
+    <a ui-sref="app.projectslist" class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th icon text-info-lter"></i>
+      <span class="font-bold" >镜像仓库</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li ui-sref-active="active" ng-repeat='item in index.imageProjectsList'>
+        <a ui-sref="app.images.list({project_id:item.project_id})">
+          <span>镜像仓库{{item.name}}</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.stacks.list">
+      <i class="glyphicon glyphicon-list-alt icon text-info-lter"></i>
+      <span>编排仓库</span>
+    </a>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.store">
+      <i class="glyphicon glyphicon-search icon text-info-lter"></i>
+      <span>应用市场</span>
+    </a>
+  </li>
+  <!-- <li ui-sref-active="active">
+    <a ui-sref="app.star">
+      <i class="glyphicon glyphicon-star icon text-info-lter"></i>
+      <span>收藏夹</span>
+    </a>
+  </li> -->
+
+  <li class="line dk"></li>
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span>网络配置</span>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.loadbalance">
+      <i class="glyphicon glyphicon-random icon text-info-lter"></i>
+      <span>负载均衡</span>
+    </a>
+  </li>
+
+  <li class="line dk"></li>
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span>基础设备</span>
+  </li>
+  <li ui-sref-active="active">
+    <a ui-sref="app.nodes.list">
+      <i class="glyphicon glyphicon-hdd icon text-info-lter"></i>
+      <span>主机管理</span>
+    </a>
+  </li>
+</ul>
+<!-- / list -->

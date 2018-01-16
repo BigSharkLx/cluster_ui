@@ -1,0 +1,11 @@
+{
+  "name": "TrueCube",
+  "copyrightYear":"2018",
+  "companyName":"TrueCube",
+  "companySimpleName":"TrueCube",
+  "serviceEmail":"support@truepaas.com",
+  "docUrl": "https://docs.truepaas.com",
+  "uaaUrl": "https://ucenter.truepaas.com",
+  "svcMysql": "https://mysql-admin.truepaas.com/index.php",
+  "svcGlusterfs": "https://userglusterfs.truepaas.com/loginuser"
+}

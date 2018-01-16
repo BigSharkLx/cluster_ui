@@ -1,0 +1,90 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false;
+    app.settings.asideDock = false;
+  ">
+  <!-- main -->
+  <div class="col" ng-controller="ClusterListCtrl as cluster">
+    <div class="bg-light lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h1 class="h3 text-dark m-b-xs">主机</h1>
+          <small class="font-thin text-base">主机提供计算及存储资源，通过添加主机可以便捷的扩展资源池。</small>
+        </div>
+        <div class="col-sm-6 text-right hidden-xs v-middle">
+          <div class="inline m-r text-left v-middle">
+            <div class="text-success m-b-xs">已添加{{cluster.totalNodes}}个主机</div>
+            <div>主机额度~</div>
+          </div>
+          <div class="inline text-left m-r">
+              <div ui-jq="easyPieChart" ui-options="{
+                  percent: 0,
+                  lineWidth: 4,
+                  trackColor: '{{app.color.light}}',
+                  barColor: '{{app.color.success}}',
+                  scaleColor: false,
+                  size: 60,
+                  rotate: 90,
+                  lineCap: 'butt'
+                }" class="inline">
+                <div>
+                  <i class="icon-layers text-success"></i>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-md ng-scope">
+      <div class="row">
+        <div class="col-md-6 pull-left">
+          <button ng-click='cluster.refreshGrid()' class="btn m-b-xs btn-sm btn-warning btn-addon"><i class="fa fa-refresh"></i>刷新</button>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3 pull-right">
+          <div class="form-group">
+            <div class="input-group m-b">
+                <span class="input-group-addon bg-white no-border rounded padder"><i class="fa fa-search"></i></span>
+                <input type="text" ng-model='searchNode' class="form-control no-border rounded padder" placeholder="搜索主机">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+
+          <div class="table-responsive m-b-lg">
+                <div ui-grid="cluster.gridOptionsNodeList" ui-grid-resize-columns ui-grid-move-columns ui-grid-pagination
+                     ui-grid-auto-resize></div>
+
+
+          <!-- <div class="panel">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th style="width:200px;" class="text-center">主机名称</th>
+                <th>标签</th>
+                <th style="width:100px;">状态</th>
+                <th style="width:200px;">运行时间</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="node in cluster.nodes">
+                <td class="v-middle text-center"><a class="text-info" href="/apps/test">{{node.objectMeta.name}}</a></td>
+                <td>
+                  <span class="label bg-light">beta.kubernetes.io/arch: {{node.objectMeta.labels["beta.kubernetes.io/arch"]}}</span>
+                  <span class="label bg-light">beta.kubernetes.io/os: {{node.objectMeta.labels["beta.kubernetes.io/os"]}}</span>
+                  <span class="label bg-light">kubernetes.io/hostname: {{node.objectMeta.labels["kubernetes.io/hostname"]}}</span>
+                </td>
+                <td class="v-middle text-success" ng-if="node.ready==='True'">运行中</td>
+                <td class="v-middle text-danger" ng-hide="node.ready==='True'">未准备好</td>
+                <td class="v-middle">{{node.objectMeta.creationTimestamp}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- / main -->
+</div>

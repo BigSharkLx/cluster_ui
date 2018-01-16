@@ -1,0 +1,834 @@
+
+<!--头部-->
+<div class="m_bg">&nbsp;</div>
+<div class="main">
+  <div class="header" ng-controller="VisibleController">
+    <div class="head clearfix">
+      <div class="logo"><a href=""><img src="img/images/logo.png" alt="TrueCube"/></a></div>
+      <div class="nav_m">
+        <div class="n_icon"></div>
+        <ul class="nav clearfix menu" ng-controller="BackToAppController">
+          <li class="menu-dropdown"><a  class="dropbtn s_a">首页</a></li>
+          <li class="menu-dropdown"><a  class="dropbtn s_b">产品特色</a></li>
+          <li class="menu-dropdown"><a  class="dropbtn s_c">解决方案</a></li>
+          <li class="menu-dropdown"><a  class="dropbtn s_d">适用场景</a></li>
+          <li class="menu-dropdown"><a class="dropbtn s_e">合作伙伴</a></li>
+          <li class="menu-dropdown"><a  class="dropbtn s_f">立即加入</a></li>
+          <li  class="menu-dropdown" ng-if="visible">
+            <a class="dropbtn login_class console"  ng-click="backToApp()">控制台</a>
+          </li>
+          <li class="menu-dropdown" ng-if="!visible"><a  class="dropbtn login_class"  ng-click="create_account()" target="_blank">注册</a></li>
+          <li class="menu-dropdown" ng-if="!visible"><a  class="dropbtn login_class"  ng-click="backToApp()">登录</a></li>
+          <div class="header-slider" style="left: 0px; width: 0px;"></div>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <!--头部-->
+  <!--幻灯片-->
+
+  <carousel interval="5000">
+    <slide>
+      <img class="bannerImgs" src="img/images/banner-1.png">
+    </slide>
+    <slide>
+      <img class="bannerImgs" src="img/images/banner-2.png">
+    </slide>
+    <slide>
+      <img class="bannerImgs" src="img/images/banner-3.png">
+    </slide>
+    <slide>
+      <img class="bannerImgs" src="img/images/banner-4.png">
+    </slide>
+  </carousel>
+</div>
+<!--幻灯片-->
+<div class="i_m i_ma b">
+  <div class="i_name">
+    <span>产品特色</span>
+    <p>PRODUCT FEATURE</p>
+  </div>
+  <ul class="clearfix">
+    <li>
+      <div class="tu"><img src="img/images/service.png" alt=""/></div>
+      <div class="name">微服务架构</div>
+      <p>产品面向微服务应用，将大型的复杂应用分解为多个小的微服务，每个微服务都围绕着具体业务进行构建，各微服务可独立部署，且服务之间互相协调、互相配合，实现应用的快速迭代。</p>
+
+    </li>
+    <li>
+
+      <div class="tu"><img src="img/images/docker.png" alt=""/></div>
+      <div class="name">容器服务</div>
+      <p>以应用为中心，简化应用管理，为用户提供了高性能的容器集群管理方案。支持弹性伸缩、垂直扩容、灰度升级、服务发现、服务编排、错误恢复及性能监测等功能，让企业能够快速部署服务，轻松运维服务。</p>
+
+    </li>
+    <li>
+
+      <div class="tu"><img src="img/images/devops.png" alt=""/></div>
+      <div class="name">DevOps</div>
+      <p>通过对CI/CD、高效运维、微服务架构等功能特性的设计和打磨，加速产品迭代，实现业务持续创新、持续集成和持续交付。 </p>
+
+    </li>
+    <li>
+
+      <div class="tu"><img src="img/images/znyw.png" alt=""/></div>
+      <div class="name">智能运维</div>
+      <p>通过负载均衡，弹性伸缩，日志监控，高可用等实现标准化、自动化、架构化、过程优化，达到降低运维成本、提高运维效率的自动化运维目标。 </p>
+
+    </li>
+    <li>
+      <div class="tu"><img src="img/images/mjfb.png" alt=""/></div>
+      <div class="name">秒级发布</div>
+      <p>提供云计算最先进的容器技术，从代码托管开始，TrueCube平台接管一切。新特性可以秒级上线，让您不不会错失每一个商机。 </p>
+
+    </li>
+    <li>
+      <div class="tu"><img src="img/images/fzjh.png" alt=""/></div>
+      <div class="name">负载均衡</div>
+      <p>负载均衡服务支持会话保持技术，在开启会话保持选项时，可以保证将请求转发到一个固定的后端服务副本上，在后端服务副本宕机时，会自动将对应节点从负载均衡的转发列表中移出，保证服务的高可用。 </p>
+    </li>
+  </ul>
+</div>
+<div class="i_m i_mb c">
+  <div class="i_name">
+    <span>解决方案</span>
+    <p>SOLUTION</p>
+  </div>
+  <ul class="clearfix">
+    <li>
+      <div class="l_up">
+        <div class="tu"><img src="img/images/best-devops.jpg" alt=""></div>
+        <div class="title">完善的 DevOps 工具链</div>
+      </div>
+      <div class="l_line"><span class="line"></span></div>
+      <div class="l_dn">
+        <p>提供了一键部署、持续集成、监控告警以及日志的收集管理系统，全面加速产品迭代。</p>
+      </div>
+    </li>
+    <li>
+      <div class="l_up">
+        <div class="tu"><img src="img/images/wfujg.png" alt=""></div>
+        <div class="title">先进的微服务架构</div>
+      </div>
+      <div class="l_line"><span class="line"></span></div>
+      <div class="l_dn">
+        <p>提供成熟的微服务架构服务语言、数据存储、服务编排、服务管理支持，为您打造微服务架构实施的最佳平台。</p>
+      </div>
+    </li>
+    <li>
+      <div class="l_up">
+        <div class="tu"><img src="img/images/txss.jpg" alt=""></div>
+        <div class="title">弹性伸缩</div>
+      </div>
+      <div class="l_line"><span class="line"></span></div>
+      <div class="l_dn">
+        <p>弹性伸缩根据业务需求自动调整计算资源、优化资源组合，保障业务系统的稳定性和高可用性，同时节约计算资源成本。</p>
+      </div>
+    </li>
+    <li>
+      <div class="l_up">
+        <div class="tu"><img src="img/images/jcss.jpg" alt=""></div>
+        <div class="title">稳定的基础设施</div>
+      </div>
+      <div class="l_line"><span class="line"></span></div>
+      <div class="l_dn">
+        <p>稳定可靠的基础设施，与多方知名厂商合作，久经考验，值得信赖。</p>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="i_m  i_mc d">
+  <div class="i_name">
+    <span>适用场景</span>
+    <p>SUITABLE SCENE</p>
+  </div>
+  <ul class="sence clearfix">
+    <li>
+      <div class="tu tu_a">&nbsp;</div>
+      <div class="name">政府/公共事业</div>
+      <p>提高政务效率，加速政策落地</p>
+    </li>
+    <li>
+      <div class="tu tu_b">&nbsp;</div>
+      <div class="name">企业服务</div>
+      <p>一体化架构无缝转型微服务架构</p>
+    </li>
+    <li>
+      <div class="tu tu_c">&nbsp;</div>
+      <div class="name">金融</div>
+      <p>为金融行业提供生产级容器云 </p>
+    </li>
+    <li>
+      <div class="tu tu_d">&nbsp;</div>
+      <div class="name">教育</div>
+      <p>
+        提供各种场景下在线教育解决方案
+      </p>
+    </li>
+  </ul>
+  <ul class="sence clearfix">
+    <li>
+      <div class="tu tu_e">&nbsp;</div>
+      <div class="name">互联网</div>
+      <p>
+        快速迭代、高效开发
+      </p>
+    </li>
+    <li>
+      <div class="tu tu_f">&nbsp;</div>
+      <div class="name">运营商 </div>
+      <p>
+        提供基于数据中心版的容器云服务
+      </p>
+    </li>
+    <li>
+      <div class="tu tu_g">&nbsp;</div>
+      <div class="name">能源</div>
+      <p>
+        一体化集成能源行业应用系统
+      </p>
+    </li>
+    <li>
+      <div class="tu tu_h">&nbsp;</div>
+      <div class="name">······</div>
+      <p>
+
+      </p>
+    </li>
+  </ul>
+</div>
+<div class="company-f">
+  <div class="i_name">
+    <span>合作伙伴</span>
+    <p>COOPERATIVE PARTNER</p>
+  </div>
+  <ul class="company-all clearfix">
+    <li>
+      <img class="company-item" src="img/images/fhkj.jpg" alt="">
+    </li>
+    <li>
+      <img class="company-item" src="img/images/ltjt.jpg" alt="">
+    </li>        <li>
+      <img class="company-item" src="img/images/hbjyt.png" alt="">
+    </li>        <li>
+      <img class="company-item" src="img/images/hbwht.png" alt="">
+    </li>
+
+  </ul>
+</div>
+
+
+<div class="i_md e">
+  <div class="i_name special_name">
+    <span>立即加入</span>
+    <p>JOIN IMMEDIATELY</p>
+  </div>
+  <div class="join_container">
+    <div class="main-title">
+      <span>容器</span>
+      <span>计算</span>
+      <span>创新</span>
+    </div>
+    <h2>TrueCube助力企业数字化转型</h2>
+    <a ng-controller="VisibleController">
+      <button ng-click="create_account()" class="free_register">免费注册</button>
+    </a>
+  </div>
+</div>
+
+
+<div class="foot">
+  © 湖北省楚天云有限公司. 版权所有
+</div>
+
+<style>
+
+  /*通用父子盒子嵌套浮动问题解决，开始*/
+  .clear {
+    margin: 0px auto;
+    width: 100%;
+    height: 1px;
+    font-size: 1px;
+    clear: both;
+    background: none;
+    overflow: hidden;
+  }
+  .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  .clearfix {
+    display: inline-block;
+  }
+  * html .clearfix {
+    height: 1%;
+  }
+  .clearfix {
+    display: block;
+  }
+  /*通用父子盒子嵌套浮动问题解决，结束*/
+  /*间隙层开始*/
+  .space_hx { /*横向间隙*/
+    clear: both;
+    width: 100%;
+    height: 20px;
+    font-size: 1px;
+    overflow: hidden;
+  }
+  .space_zx { /*纵向间隙*/
+    float: left;
+    width: 10px;
+    font-size: 1px;
+    overflow: hidden;
+  }
+  /*间隙层结束*/
+
+  body{font-family:"Microsoft Yahei";font-size:14px;color:#5B5B5B; padding:0; margin:0;}
+  input , textarea , select{font-family:"Microsoft Yahei"; color:#5B5B5B; font-size:14px;}
+  /*头部*/
+  .m_bg{ width:100%; height:100%; position:fixed; left:0; top:0; z-index:-1; background:url(../img/images/bg_b.jpg) no-repeat; background-size:cover;}
+  .m_bg_a{ background:url(../img/images/bg_d.jpg) no-repeat; background-size:cover;}
+  .main{ width:100%; position:relative; z-index:2;}
+  .header{ background:#1c2b36; width:100%; margin:0px auto; position:relative; border-bottom:1px solid #ddd; position:absolute; left:0; top:0; z-index:9999;}
+  .h_fix{ position:fixed; left:0; top:0; z-index:99999;}
+  .header .head{ width:1120px; height:70px; margin:0px auto; position:relative;}
+  .head .logo{ width:157px; height:46px; float:left; margin-top:20px;}
+  .head .logo img{ width:120px; height:26px; vertical-align:top;}
+  .head .nav{float:left;text-align:left; margin-top:20px;}
+  .head .nav li{ display:inline-block; *display:inline; zoom:1; height:30px; line-height:30px;}
+  .head .nav li a{ font-size:16px; color:#fff; display:inline-block; *display:inline; zoom:1; height:30px; line-height:30px;}
+  .head .nav li.now a,.h_fix .head .nav li.now a,.head .nav li a:hover,.h_fix .head .nav li a:hover{ color:#19B1EC;}
+  .h_fix .head .nav li a{ color:#fff;}
+
+  .nav_m{ height:35px; display:inline-block; *display:inline; zoom:1; position:relative; float:left;margin-left: 15%;}
+  .nav_m .n_icon{ display:inline-block; *display:inline; zoom:1; position:relative; height:18px; width:auto; background:url(../img/images/nav_ico.png) no-repeat left center; padding-left:25px; line-height:18px; color:#FFF; position:absolute; right:0px; top:5px; z-index:9999; cursor:pointer;display:none;}
+  .h_fix .nav_m .n_icon{ color:#000; background:url(../img/images/nav_ico_a.png) no-repeat left center;}
+  .banner{ width:100%;height: 330px; overflow:hidden; margin:0px auto;}
+  .i_name{     width: 100%;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 36px;
+    color: #000;
+    font-weight: bold;}
+    .i_name span{ color:#00A3DF; font-weight:bold;}
+    .i_name p{ font-size:18px; color:#5B5B5B;}
+    .i_ma{ width:100%; background:#FFF;}
+    .i_ma ul{ width:1120px; padding:0 0 50px; margin:0px auto;}
+    .i_ma ul li{
+      padding: 20px;
+      width: 33.33%;
+      float: left;
+      text-align: center;
+      box-sizing: border-box;
+      height: 300px;
+      cursor: pointer;
+    }
+
+    .i_ma ul li:hover{
+      box-shadow: 1px 1px 4px #9E9E9E;
+      transform: scale(0.9);
+      transition: all .5s ease;
+    }
+    .i_ma ul li:hover .tu>img {
+      opacity: 1;
+    }
+    .i_ma ul li a{ color:#555;}
+    .i_ma ul li .tu{ width:100px; height:100px; overflow:hidden; margin:0px auto;}
+    .i_ma ul li .tu img{ width:100px; height:100px; vertical-align:top;transition: 0.7s;-moz-transition:  0.7s;-webkit-transition:  0.7s;-o-transition:  0.7s; opacity: 0.6;}
+    .i_ma ul li .name{ width:100%; height:45px; line-height:45px; font-size:14px; font-weight:bold;}
+    .i_ma ul li p{ font-size:14px; line-height:175%;}
+    .i_m{ padding:15px 0;}
+    .i_mb{ width:100%; background:#F4F4F4;}
+    .i_mb ul{ display: flex;
+      justify-content: space-between;
+      width: 1120px;
+      margin: 0px auto;
+      padding-bottom: 50px;}
+      .i_mb ul li{
+        cursor: pointer;
+        transition: all .5s;
+        width: 23%;
+        background: #ffffff96;
+        color: #333;
+        text-align: center;
+        float: left;
+        padding: 60px 20px;
+        box-sizing: border-box;}
+        .i_mb ul li:hover{
+          background: #0ba1e4;
+          transform: scale(1.1);
+          color: #fff;
+        }
+
+        .i_mb ul li:hover .l_line>.line{
+          background: #fff;
+        }
+        .i_mb ul li:hover .l_up>.title{
+          color: #fff;
+        }
+
+        .i_mb ul li a{ font-size:16px; color:#474747;}
+        .i_mb ul li a:hover{ color:#00A3DF;}
+        .i_mb ul li img{ width:130px; height:70px; vertical-align:top;}
+        .i_mb ul li .title{ color: #333;width:100%; height:55px; line-height:55px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:16px; text-align:center;}
+        .i_mc{ background: url(../img/images/bg_fw.jpg) no-repeat;
+          background-size: cover;}
+          .i_mc ul li img{ height:300px;}
+          .i_md{    height: 400px;
+            width: 100%;
+            background: url(../img/images/bg_a.png) repeat;
+            padding: 15px 0;}
+
+            .i_md .i_name p,.i_md .i_name{ color:#FFF;}
+
+            .i_mg .i_name,.i_mg .i_name p{ color:#FFF;}
+            .foot{ width:100%; background:#1c2b36; padding:10px 0; text-align:center; font-size:14px; color:#FFF;}
+            .s_bg{ width:100%; background:url(../img/images/bg_f.jpg) repeat; padding-top:20px;}
+
+            .header-nav{
+              position:relative;
+              background:#000;
+            }
+            .fl {
+              float: left;
+            }
+
+            ol, ul, li {
+              list-style: none;
+              padding: 0px;
+              margin: 0px;
+            }
+            .menu li {
+              float: left;
+              height: 45px;
+              padding: 0 14px;
+            }
+            .menu li:hover {
+              transition: all .8s;
+            }
+
+            .menu li a {
+              text-decoration: none;
+              color: #fff;
+              font-size: 16px;
+              line-height: 45px;
+              cursor: pointer;
+            }
+            .menu-dropdown:hover .dropbtn {
+              transition: all .5s;
+              color: #00c1de;
+            }
+
+            .menu-dropdown-content {
+              display: none;
+              position: fixed;
+              left: 0px;
+              right: 0px;
+              padding: 20px;
+              background-color: rgba(0,0,0,0.9);
+              min-width: 100%;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            }
+            .menu-dropdown-contentp-roduct {
+              float: left;
+            }
+            .menu-dropdown:hover .menu-dropdown-content {
+              padding-left: 10%;
+              display: block;
+            }
+            .header-slider {
+              position: absolute;
+              bottom: -20px;
+              left: 0px;
+              width: 0;
+              height: 2px;
+              background: #00c1de;
+              transition: width .5s;
+              transform-origin: 0 0;
+              margin-left: 13px;
+            }
+            .header-slider-show{
+              transition: all .5s;
+            }
+
+            .l_line {
+              text-align: center;
+              width: 100%;
+              margin-bottom: 10px;
+            }
+            span.line {
+              display: inline-block;
+              height: 2px;
+              width: 60%;
+              background: #71bef1;
+            }
+
+            .sence{
+              display: flex;
+              justify-content: space-between;
+              width: 1120px;
+              margin: 0px auto;
+              padding-bottom: 50px;
+            }
+            .sence li{
+              color: #333;
+              width: 23%;
+              box-shadow: 0 0 10px 0px #9E9E9E;
+              padding: 10px;
+              box-sizing: border-box;
+              text-align: center;
+              cursor: pointer;
+            }
+            .sence li .name{
+              margin-bottom: 10px;
+            }
+            .sence li .tu {
+              display: inline-block;
+              *display: inline;
+              zoom: 1;
+              width: 160px;
+              height: 160px;
+              border: 2px solid #bbb;
+              border-radius: 200%;
+              -moz-border-radius: 200%;
+              -webkit-border-radius: 200%;
+              margin-bottom: 20px;
+              transition: 0.7s;
+              -moz-transition: 0.7s;
+              -webkit-transition: 0.7s;
+              -o-transition: 0.7s;
+            }
+            .sence li .tu_a {
+              background: url(../img/images/zf.png) no-repeat center center;
+              background-size: 50%;
+            }
+            .sence li .tu_b {
+              background: url(../img/images/qy.png) no-repeat center center;
+              background-size: 50%;
+            }
+            .sence li .tu_c {
+              background: url(../img/images/jr.png) no-repeat center center;
+              background-size: 50%;
+            }
+            .sence li .tu_d {
+              background: url(../img/images/jy.png) no-repeat center center;
+              background-size: 50%;
+            }
+            .sence li .tu_e {
+              background: url(../img/images/hlw.png) no-repeat center center;
+              background-size: 50%;
+            }
+            .sence li .tu_f {
+              background: url(../img/images/yys.png) no-repeat center center;
+              background-size: 50%;
+            }
+            .sence li .tu_g {
+              background: url(../img/images/ny.png) no-repeat center center;
+              background-size: 50%;
+            }
+            .sence li .tu_h {
+              background: url(../img/images/hd.png) no-repeat center center;
+              background-size: 50%;
+            }
+            .sence li:hover .tu{
+              transform: rotate(360deg);
+              border: 2px solid #01a3df;
+            }
+
+            .company-f{
+              background: #ececec;
+            }
+
+            .company-all {
+              width: 1120px;
+              margin: 0px auto;
+              padding-bottom: 100px;
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .company-all li {
+              transition: all .6s;
+              filter: grayscale(100%);
+              width: 20%;
+              height: 100px;
+              background: #fff;
+            }
+            .company-all li:hover{
+              filter: grayscale(0);
+            }
+            img.company-item {
+              margin-top: 5px;
+              width: 100%;
+            }
+
+
+            .join_container {
+              text-align: center;
+              color: #fff;
+            }
+            .join_container h2{
+              font-size: 30px;
+              margin-bottom: 30px;
+            }
+
+            button.free_register {
+              cursor: pointer;
+              border: 1px solid #fff;
+              padding: 10px 40px;
+              color: #fff;
+              background: transparent;
+              font-size: 16px;
+              transition: all .5s;
+              border-radius: 5px;
+            }
+            button.free_register:hover{
+              background: #fff;
+              color: #01a4df;
+            }
+            .main-title span{
+              color: #fff;
+              padding-left: 15px;
+              position: relative;
+              display: inline-block;
+              font-size: 18px;
+              margin: 0px 20px;
+              margin-bottom: 20px;
+            }
+            .main-title span::before{
+              width: 10px;
+              height: 10px;
+              display: block;
+              content: ' ';
+              background: #fff;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              margin-top: -5px;
+              border-radius: 50%;
+            }
+            .login_class{
+              color: #00c1de!important;
+            }
+            .console{
+              box-shadow: 1px 1px 5px 0px #eee;
+              border-radius: 5px;
+              padding: 0px 14px!important;
+            }
+            .carousel{
+              top:71px;
+            }
+            .special_name{
+              padding-top:30px!important;
+            }
+
+            @media screen and (max-width:1150px){
+              .header .head,.i_ma ul,.i_mb ul,.i_md .i_mdm,.i_me ul li dl,.i_mf .i_mfm,.i_mgm,.scd,.sence,.company-all{width:960px; margin:0px auto;}
+              .i_mb ul li{ width:303px; margin-right:25px;}
+              .i_mc ul li img{ height:261px;}
+              .carousel{
+                top:71px;
+              }
+              .nav_m{
+                margin-left: 12%;
+              }
+            }
+            @media screen and (max-width:990px){
+              .header .head,.i_ma ul,.i_mb ul,.i_md .i_mdm,.i_me ul li dl,.i_mf .i_mfm,.i_mgm,.scd,.sence,.company-all{width:740px;}
+              .sence li .tu{
+                width: 90px;
+                height: 90px;
+              }
+              .company-all li{
+                height: 70px;
+              }
+              .i_name {
+                padding-top: 100px;
+              }
+              .banner{
+                height: 360px;
+              }
+              .p_container{
+                top: 100px;
+              }
+
+              .nav_m .n_icon{ display:block;}
+              .head .nav{
+                display:none;
+                position:absolute;
+                top:50px;
+                left:0px;
+                z-index:9999;
+                width:100%;
+                margin:0px;
+                padding: 5px 0;
+                background: #1c2b36;
+              }
+              .head .nav li{ margin-right:5px;}
+              .head .nav li a{ color:#fff;}
+              .head{ position:relative;}
+              .head .nav_m{ display:block; position:absolute; right:0px; top:20px; z-index:99999; width:100%;}
+              .head .lang{ margin-left:30px; }
+              .head .search{ float:left; margin-left:30px;}
+              .head .lang,.head .search,.head .logo{ position:relative; z-index:999999;}
+              .i_name{ font-size:30px;}
+              .i_name p{ font-size:16px;}
+              .i_ma ul li{ width:50%; height: 320px;}
+              .i_mb ul li{ width:236px; margin-right:15px;}
+              .i_mc ul li img{ height:203px;}
+              .header-slider{display: none;}
+            }
+            @media screen and (max-width:770px) {
+              .header .head,.i_ma ul,.i_mb ul,.i_md .i_mdm,.i_me ul li dl,.i_mf .i_mfm,.i_mgm,.scd,.sence,.company-all{width:480px; margin:0px auto;}
+              .head .lang,.head .search{ margin-left:12px;}
+              .head .nav li{ width:32%; height:35px; line-height:35px;}
+              .head .nav li a{text-align:center; display:block; width:90%; padding:0 5%;}
+              .i_mc ul li img{ height:131px;}
+              .i_mb ul li .title{ font-size:13px;}
+              .head .nav{
+                background: #1c2b36;
+              }
+              .i_ma ul li{
+                height: 350px;
+              }
+              .i_mb ul li{
+                float: left;
+                height: 340px;
+                margin: 10px 0;
+                width: 45%;
+                margin: 10px 2.5%;
+              }
+              .i_mb ul{
+                display: block;
+              }
+              .company-all li{
+                height: 50px;
+              }
+            }
+            @media screen and (max-width:500px) {
+              .header .head,.i_ma ul,.i_mb ul,.i_md .i_mdm,.i_me ul li dl,.i_mf .i_mfm,.i_mgm,.scd,.sence,.company-all{width:320px; margin:0px auto;}
+              .head .lang{ float:right; margin-left:0px; margin-top:15px;}
+              .header .head{ height:70px;}
+              .head .logo{ position:absolute; left:0px; top:0px; z-index:9999;}
+              .head .search{ margin-top:70px; margin-left:0px;}
+              .nav_m .n_icon{ color:#000; background:url(../img/images/nav_ico_a.png) no-repeat left center;}
+              .head .nav{ top:35px;}
+              .i_name{ font-size:24px;}
+              .i_ma ul li, .i_mb ul li{ width:100%; margin-right:0px; margin-bottom:30px;}
+              .i_ma ul li .tu img, .i_ma ul li .tu{ width:80px; height:80px;}
+              .i_mc ul li img{ height:273px;}
+              .m_bg_a{ background:url(../img/images/bg_b.jpg) no-repeat; background-size:cover;}
+              .head .nav li{
+                width: 48%;
+              }
+              .sence li{
+                width: 45%;
+                float: left;
+                margin: 10px 2.5%;
+                height: 210px;
+              }
+              .sence{
+                display: block;
+                padding-bottom: 0;
+              }
+              .company-all{
+                display: block;
+              }
+              .company-all li{
+                width: 45%;
+                height: 70px;
+                float: left;
+                margin: 10px 2.5%;
+              }
+              .join_container h2{
+                font-size: 24px;
+              }
+            }
+            .nav>li>a{
+              padding:0;
+              margin:0;
+            }
+            .nav>li>a:hover, .nav>li>a:focus{
+              background:transparent;
+            }
+            .app-header-fixed{
+              padding-top: 0px;
+            }
+          </style>
+
+
+          <script type="text/javascript">
+            $(window).scroll(function(){
+              if($(window).scrollTop()>0){
+                $('.header').addClass('h_fix');
+              }else{
+                $('.header').removeClass('h_fix');
+              }
+              if($(window).scrollTop()>3500){
+                $('.m_bg').addClass('m_bg_a');
+              }else{
+                $('.m_bg').removeClass('m_bg_a');
+              }
+            });
+
+            var headerSlider=function(){
+              var sumWidth=function(index,padding){
+                var left=0;
+                for(var i=0;i<index;i++){
+                  var width=$($('.menu-dropdown')[i]).width();
+                  left+=width+padding;
+                }
+                return left;
+              }
+
+              $('.menu li').mouseenter(function(){
+                $('.header-slider').css({'left':sumWidth($(this).index(),28)+'px','width':$(this).width()})
+                setTimeout(function(){
+                  $('.header-slider').addClass('header-slider-show')
+                },0)
+              })
+
+              $('.menu').mouseleave(function(){
+                $('.header-slider').css({'width':0}).removeClass('header-slider-show')
+              })
+            }
+            headerSlider()
+
+            $(function(){
+              var w_w=$(window).width();
+              var m_l=(1920-w_w)/2;
+
+              $('.nav_m .n_icon').click(function(){
+                $(this).siblings('ul').slideToggle();
+              });
+
+              $('.head .nav li:last-child').css('margin-right',0+'px');
+              $('.i_m ul li:last-child').css('margin-right',0+'px');
+              $('.i_book li:nth-child(3n)').css('margin-right',0+'px');
+            })
+
+            $('.s_a').click(function(){
+              $('body,html').animate({'scrollTop':0},'normal')
+            })
+            $('.s_b').click(function(){
+              $('body,html').animate({'scrollTop':260},'normal')
+            })
+            $('.s_c').click(function(){
+              $('body,html').animate({'scrollTop':1150},'normal')
+            })
+            $('.s_d').click(function(){
+              $('body,html').animate({'scrollTop':1810},'normal')
+            })
+            $('.s_e').click(function(){
+              $('body,html').animate({'scrollTop':2650},'normal')
+            })
+            $('.s_f').click(function(){
+              $('body,html').animate({'scrollTop':2800},'normal')
+            })
+
+          </script>

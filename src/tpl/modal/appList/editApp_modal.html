@@ -1,0 +1,148 @@
+<div class="modal-header">
+  <h3 class="modal-title">修改应用</h3>
+</div>
+<div class="modal-body">
+  <form class="form-horizontal" name="myForm">
+
+    <div class="form-group" ng-class="{'has-error':myForm.name.$dirty&&!myForm.name.$valid}">
+      <label class="col-lg-3 control-label">应用名称：</label>
+      <div class="col-lg-9">
+        <input type="text" class="form-control" name="name" ng-model="addApp.name" placeholder="应用名称,必填" required>
+      </div>
+    </div>
+
+
+    <div class="form-group" ng-class="{'has-error':myForm.description.$dirty&&!myForm.description.$valid}">
+      <label class="col-lg-3 control-label">应用描述：</label>
+      <div class="col-lg-9">
+        <textarea name='description'  style="resize:none;" class="form-control ng-pristine ng-invalid ng-invalid-required ng-touched" rows="6" placeholder="应用描述，必填"  ng-model="addApp.description" required="">              </textarea>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.type.$dirty&&!myForm.type.$valid}">
+      <label class="col-lg-3 control-label">应用类型：</label>
+      <div class="col-lg-9">
+        <input type="text" class="form-control" name="type" ng-model="addApp.type" placeholder="应用名称,必填" required disabled>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-lg-3 control-label">private：</label>
+      <div class="col-lg-9">
+        <select class="form-control ng-pristine ng-valid ng-touched" name="private" ng-model="addApp.private">
+          <option value='false'>否</option>
+          <option value='true'>是</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.containerImage.$dirty&&!myForm.containerImage.$valid}">
+      <label class="col-lg-3 control-label">containerImage：</label>
+      <div class="col-lg-9">
+        <input type="text" class="form-control" name="containerImage" ng-model="addApp.containerImage" placeholder="containerImage,必填" required disabled>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.imagePullSecret.$dirty&&!myForm.imagePullSecret.$valid}">
+      <label class="col-lg-3 control-label">imagePullSecret：</label>
+      <div class="col-lg-9">
+        <input type="text" class="form-control" name="imagePullSecret" ng-model="addApp.imagePullSecret" placeholder="null" disabled>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.containerCommand.$dirty&&!myForm.containerCommand.$valid}">
+      <label class="col-lg-3 control-label">containerCommand：</label>
+      <div class="col-lg-9">
+        <input type="text" class="form-control" name="containerCommand" ng-model="addApp.containerCommand" placeholder="null" disabled>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.containerCommandArgs.$dirty&&!myForm.containerCommandArgs.$valid}">
+      <label class="col-lg-3 control-label">containerCommandArgs：</label>
+      <div class="col-lg-9">
+        <input type="text" class="form-control" name="containerCommandArgs" ng-model="addApp.containerCommandArgs" placeholder="null"  disabled>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.replicas.$dirty&&!myForm.replicas.$valid}">
+      <label class="col-lg-3 control-label">replicas：</label>
+      <div class="col-lg-9">
+        <input type="number" class="form-control" name="replicas" ng-model="addApp.replicas" placeholder="replicas,必填" required>
+      </div>
+    </div>
+    <div class="form-group" ng-class="{'has-error':myForm.portMappings.$dirty&&!myForm.portMappings.$valid}">
+      <label class="col-lg-3 control-label">portMappings：</label>
+      <div class="col-lg-9">
+        <input type="text" class="form-control" name="portMappings" ng-model="addApp.portMappings" placeholder="" disabled >
+      </div>
+    </div>
+    <div class="form-group" ng-class="{'has-error':myForm.variables.$dirty&&!myForm.variables.$valid}">
+      <label class="col-lg-3 control-label">variables：</label>
+      <div class="col-lg-9">
+        <input type="text" class="form-control" name="variables" ng-model="addApp.variables" placeholder="" disabled>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-lg-3 control-label">isExternal：</label>
+      <div class="col-lg-9">
+        <select class="form-control ng-pristine ng-valid ng-touched" name="isExternal" ng-model="addApp.isExternal">
+          <option value='false'>否</option>
+          <option value='true'>是</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.namespace.$dirty&&!myForm.namespace.$valid}">
+      <label class="col-lg-3 control-label">空间id：</label>
+      <div class="col-lg-9">
+        <input type="text" class="form-control" name="namespace" ng-model="addApp.namespace" placeholder="namespace,必填" required disabled>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.memoryRequirement.$dirty&&!myForm.memoryRequirement.$valid}">
+      <label class="col-lg-3 control-label">memoryRequirement：</label>
+      <div class="col-lg-9">
+        <input type="text" class="form-control" name="memoryRequirement" ng-model="addApp.memoryRequirement" placeholder="null" disabled>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.cpuRequirement.$dirty&&!myForm.cpuRequirement.$valid}">
+      <label class="col-lg-3 control-label">cpuRequirement：</label>
+      <div class="col-lg-9">
+        <input type="text" class="form-control" name="cpuRequirement" ng-model="addApp.cpuRequirement" placeholder="null"  disabled>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-lg-3 control-label">labels：</label>
+      <div class="col-lg-9">
+        <div class="col-lg-12" ng-class="{'has-error':myForm.app_value.$dirty&&!myForm.app_value.$valid}">
+          <label class="col-lg-3 control-label">app：</label>
+          <div class="col-lg-9">
+            <input type="text" class="form-control" name="app_value" ng-model="addApp.app_value" placeholder="app_value,必填" required >
+          </div>
+        </div>
+        <div class="col-lg-12 m-t-xs" ng-class="{'has-error':myForm.version_value.$dirty&&!myForm.version_value.$valid}">
+          <label class="col-lg-3 control-label">version：</label>
+          <div class="col-lg-9">
+            <input type="text" class="form-control" name="version_value" ng-model="addApp.version_value" placeholder="version_value,必填" required >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-3 control-label">runAsPrivileged：</label>
+      <div class="col-lg-9">
+        <select class="form-control ng-pristine ng-valid ng-touched" name="runAsPrivileged" ng-model="addApp.runAsPrivileged">
+          <option value='false'>否</option>
+          <option value='true'>是</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-info" ng-click="addApp.ok(myForm)" ng-disabled="myForm.$invalid||addApp.submitted">确定</button>
+  <button class="btn btn-default" ng-click="addApp.cancel()">取消</button>
+</div>

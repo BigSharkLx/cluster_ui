@@ -1,0 +1,80 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false;
+    app.settings.asideDock = false;
+  ">
+  <!-- main -->
+  <div class="col">
+    <div class="bg-light lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12 m-l-md">
+          <h1 class="h3 text-black m-b-xs">
+            hello
+          </h1>
+          私有镜像 &nbsp;<i class="icon-lock"></i>
+          <div>大约12小时前</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-md ng-scope">
+      <div class="row">
+        <div class="col-md-6 pull-left">
+          <button class="btn m-b-xs btn-sm btn-info btn-addon"><i class="icon-cloud-upload"></i>本地Push镜像</button>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3 pull-right">
+          <div class="form-group">
+            <div class="input-group m-b">
+                <span class="input-group-addon bg-white no-border rounded padder"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control no-border rounded padder" placeholder="搜索镜像">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="panel">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th style="width:200px;" class="text-center">镜像名称</th>
+                <th>最近更新</th>
+                <th style="width:200px;">镜像</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="v-middle text-center"><a class="text-info" href="/apps/test">test</a></td>
+                <td class="v-middle">大约12小时前</td>
+                <td>
+                  <a href="/test">truepaas.io/library/nginx</a>
+                  <div class="item-minor ng-binding">
+                    <i class="fa fa-tag"></i> &nbsp;1.9.2
+                  </div>
+                </td>
+                <td class="v-middle">
+                  <button class="btn btn-sm btn-default btn-addon pull-right"><i class="icon-paper-plane"></i>部署最新镜像</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="v-middle text-center"><a class="text-info" href="/apps/test">test002</a></td>
+                <td class="v-middle">大约1天前</td>
+                <td>
+                  <a href="/test">truepaas.io/library/redis</a>
+                  <div class="item-minor ng-binding">
+                    <i class="fa fa-tag"></i> &nbsp;2.9.2
+                  </div>
+                </td>
+                <td class="v-middle">
+                  <button class="btn btn-sm btn-default btn-addon pull-right"><i class="icon-paper-plane"></i>部署最新镜像</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- / main -->
+</div>

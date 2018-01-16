@@ -1,0 +1,46 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false;
+    app.settings.asideDock = false;
+  ">
+  <!-- main -->
+  <div class="col" ng-controller="ProjectsListCtrl as projectslist">
+    <div class="bg-light lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h1 class="h3 text-dark m-b-xs">镜像仓库总览{{projectslist.spaceName}}</h1>
+          <small class="font-thin text-base">提供私有镜像仓库，镜像仓库镜像主要为DevOps中编译的镜像及从本地上传的镜像。</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-md ng-scope">
+      <div class="row">
+        <div class="col-md-6 pull-left">
+          <div class="inline m-r text-left v-middle">
+            <button ng-click='projectslist.addImages()' class="btn m-b-xs btn-sm btn-info btn-addon"><i class="fa fa-plus"></i>新增镜像仓库</button>
+          </div>
+          <div class="inline m-r text-left v-middle">
+            <button ng-click='projectslist.refreshGrid()' class="btn m-b-xs btn-sm btn-warning btn-addon"><i class="fa fa-refresh"></i>刷新</button>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3 pull-right">
+          <div class="form-group">
+            <div class="input-group m-b">
+                <span class="input-group-addon bg-white no-border rounded padder"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control no-border rounded padder" ng-model='searchSpace' placeholder="搜索空间名称">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="table-responsive m-b-lg">
+                <div ui-grid="projectslist.gridOptionsimagesList" ui-grid-resize-columns ui-grid-move-columns ui-grid-pagination
+                     ui-grid-auto-resize></div>
+                   </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- / main -->
+</div>

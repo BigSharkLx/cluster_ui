@@ -1,0 +1,83 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false;
+    app.settings.asideDock = false;
+  ">
+  <!-- main -->
+  <div class="col" ng-controller="AppListCtrl as applist">
+    <div class="bg-light lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h1 class="h3 text-dark m-b-xs">空间{{applist.spaceName}}</h1>
+          <small class="font-thin text-base">提供免费资源供用户开发、测试使用。若想部署应用到生产环境，请使用自有主机功能。</small>
+        </div>
+        <div class="col-sm-6 text-right hidden-xs v-middle">
+    <!-- <div class="inline m-r text-left v-middle">
+          <div class="btn-group dropdown" dropdown>
+                    <button class="btn btn-default">管理空间</button>
+                    <button class="btn btn-default" dropdown-toggle><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a ng-click='applist.addSpace()'>新增空间</a></li>
+                      <li><a ng-click='applist.editSpace()'>修改空间</a></li>
+                      <li><a ng-click='applist.deleteSpace()'>删除空间</a></li>
+                    </ul>
+                  </div>
+                </div> -->
+          <div class="inline m-r text-left v-middle">
+            <div class="text-success m-b-xs">已部署{{applist.totalApps||0}}个应用</div>
+            <div>应用额度：~</div>
+          </div>
+
+
+          <div class="m-r inline text-left">
+            <!-- <div class="m-t-sm v-middle hidden-md pull-right"> -->
+              <div ui-jq="easyPieChart" ui-options="{
+                  percent: 0,
+                  lineWidth: 4,
+                  trackColor: '{{app.color.light}}',
+                  barColor: '{{app.color.success}}',
+                  scaleColor: false,
+                  size: 60,
+                  rotate: 90,
+                  lineCap: 'butt'
+                }" class="inline">
+                <div>
+                  <i class="icon-layers text-success"></i>
+                </div>
+              </div>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-md ng-scope">
+      <div class="row">
+        <div class="col-md-6 pull-left">
+          <div class="inline m-r text-left v-middle">
+            <button ng-click='applist.addApps()' class="btn m-b-xs btn-sm btn-info btn-addon"><i class="fa fa-plus"></i>新增应用</button>
+          </div>
+          <div class="inline m-r text-left v-middle">
+            <button ng-click='applist.refreshGrid()' class="btn m-b-xs btn-sm btn-warning btn-addon"><i class="fa fa-refresh"></i>刷新</button>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3 pull-right">
+          <div class="form-group">
+            <div class="input-group m-b">
+                <span class="input-group-addon bg-white no-border rounded padder"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control no-border rounded padder" ng-model='searchApp' placeholder="搜索应用名称/类型/描述">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="table-responsive m-b-lg">
+                <div ui-grid="applist.gridOptionsApplist" ui-grid-resize-columns ui-grid-move-columns ui-grid-pagination
+                     ui-grid-auto-resize></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- / main -->
+</div>

@@ -1,0 +1,90 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false;
+    app.settings.asideDock = false;
+  ">
+  <div class="col">
+    <div class="bg-light lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <div class="clearfix">
+            <a href="" class="pull-left thumb-md avatar b-3x m-r">
+              <img src="img/tomcat.svg" alt="...">
+            </a>
+            <div class="clear">
+              <div class="h3 m-b-xs">
+                test
+              </div>
+              <div class="font-thin"><i class="fa fa-fw fa-circle text-success"></i>运行中</div>
+              <div class="font-thin"><i class="fa fa-fw fa-clock-o"></i>创建于1年前</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 text-right hidden-xs v-middle">
+          <button class="btn m-b-xs btn-sm btn-danger btn-addon"><i class="fa fa-stop"></i>停止应用</button>
+          <button class="btn m-b-xs btn-sm btn-default btn-addon"><i class="fa fa-laptop"></i>打开终端</button>
+        </div>
+      </div>
+      <div class="line dk"></div>
+      <div class="row text-left">
+        <div class="col-sm-4 font-thin">
+          所属镜像：<a href="/test">truepaas.io/library/redis</a>
+          <div>
+            镜像版本：2.9.2
+          </div>
+        </div>
+        <div class="col-sm-4 font-thin">
+          访问方式：HTTP
+        </div>
+        <div class="col-sm-4 font-thin">
+          访问地址：<a class="text-info" href="/test">http://test.app.truepaas.io</a>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="col w-md bg-light dk b-r bg-auto">
+    <div class="wrapper hidden-sm hidden-xs" id="email-menu">
+      <ul class="nav nav-pills nav-stacked nav-sm">
+        <!-- <li ng-repeat="fold in folds" ui-sref-active="active">
+          <a ui-sref="app.mail.list({fold:fold.filter})">
+            {{fold.name}}
+          </a>
+        </li> -->
+        <li ui-sref-active="active">
+          <a ui-sref="app.apps.detail.config">
+            配置
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.apps.detail.monit">
+            监控
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.apps.detail.log">
+            日志
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.apps.detail.event">
+            事件
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.apps.detail.scale">
+            弹性
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.apps.detail.setting">
+            设置
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="col">
+    <div ui-view ></div>
+  </div>
+  </div>
+</div>

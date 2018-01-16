@@ -1,0 +1,43 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+    app.settings.asideFolded = false;
+    app.settings.asideDock = false;
+  ">
+  <!-- main -->
+  <div class="col" ng-controller="ImageListCtrl as imageiist">
+    <div class="bg-light lter b-b wrapper-md">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <h1 class="h3 text-dark m-b-xs">镜像仓库{{imageiist.projectName}}</h1>
+          <small class="font-thin text-base">提供免费资源供用户开发、测试使用。若想部署应用到生产环境，请使用自有主机功能。</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper-md ng-scope">
+      <div class="row">
+        <div class="col-md-6 pull-left">
+          <div class="inline m-r text-left v-middle">
+            <button ng-click='imageiist.refreshGrid()' class="btn m-b-xs btn-sm btn-warning btn-addon"><i class="fa fa-refresh"></i>刷新</button>
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3 pull-right">
+          <div class="form-group">
+            <div class="input-group m-b">
+                <span class="input-group-addon bg-white no-border rounded padder"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control no-border rounded padder" ng-model='searchImage' placeholder="搜索镜像名称/描述/修改时间">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="table-responsive m-b-lg">
+                <div ui-grid="imageiist.gridOptionsImageList" ui-grid-resize-columns ui-grid-move-columns ui-grid-pagination
+                     ui-grid-auto-resize></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- / main -->
+</div>

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default" role="navigation" ng-init="app.settings.enableSettings=false">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ui-toggle-class="shownav" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#/access/index"><img src="img/logo.png"></a>
+            <a class="navbar-brand" href="#/access/index">TrueCube
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div ng-controller="VisibleController" class="collapse navbar-collapse navbar-ex1-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left navbar-link">
+                <li><a ng-href="{{app.docUrl}}"  target="_blank">文档</a></li>
+                <li><a href="#">下载</a></li>
+                <li><a ng-href="{{'mailto:' + app.serviceEmail}}">技术支持</a></li>
+            </ul>
+            <ul ng-controller="BackToAppController" class="nav navbar-nav navbar-right">
+                <!--<li>
+                  <a href="#">私有平台</a>
+                </li>-->
+                <li>
+                    <a ng-show="visible" ng-click="backToApp()">控制台</a>
+                </li>
+                <li>
+                    <a ng-hide="visible" ng-click="create_account()" target="_blank">注册</a>
+                </li>
+                <li>
+                    <!--<a href="#/access/login">登录</a>-->
+                    <a ng-hide="visible" ng-click="backToApp()">登录</a>
+                </li>
+            </ul>
+            <div class="hidden-sm hidden-xs">
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>

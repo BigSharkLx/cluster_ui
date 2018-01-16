@@ -1,0 +1,121 @@
+<div class="modal-header">
+  <h3 class="modal-title">主机详情</h3>
+</div>
+<div class="modal-body">
+  <form class="form-horizontal" name="myForm">
+    <div class="form-group" ng-class="{'has-error':myForm.name.$dirty&&!myForm.name.$valid}">
+      <label class="col-lg-3 control-label">主机名称：</label>
+      <div class="col-lg-9">
+        <p class="form-control static">
+          {{detailNode.objectMeta.name}}
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.replicas.$dirty&&!myForm.replicas.$valid}">
+      <label class="col-lg-3 control-label">cpu配额：</label>
+      <div class="col-lg-9">
+        <p class="form-control static" ng-bind="detailNode.allocatedResources.cpuCapacity">
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.description.$dirty&&!myForm.description.$valid}">
+      <label class="col-lg-3 control-label">内存配额：</label>
+      <div class="col-lg-9">
+        <p class="form-control static" ng-bind="detailNode.allocatedResources.memoryCapacity">
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.replicas.$dirty&&!myForm.replicas.$valid}">
+      <label class="col-lg-3 control-label">cpu限额：</label>
+      <div class="col-lg-9">
+        <p class="form-control static" ng-bind="detailNode.allocatedResources.cpuLimits">
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.description.$dirty&&!myForm.description.$valid}">
+      <label class="col-lg-3 control-label">内存限额：</label>
+      <div class="col-lg-9">
+        <p class="form-control static" ng-bind="detailNode.allocatedResources.memoryLimits">
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.type.$dirty&&!myForm.type.$valid}">
+      <label class="col-lg-3 control-label">cpu使用：</label>
+      <div class="col-lg-9">
+        <p class="form-control static" ng-bind="detailNode.allocatedResources.cpuRequests">
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.replicas.$dirty&&!myForm.replicas.$valid}">
+      <label class="col-lg-3 control-label">内存使用：</label>
+      <div class="col-lg-9">
+        <p class="form-control static" ng-bind="detailNode.allocatedResources.memoryRequests">
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.replicas.$dirty&&!myForm.replicas.$valid}">
+      <label class="col-lg-3 control-label">创建pods：</label>
+      <div class="col-lg-9">
+        <p class="form-control static" ng-bind="detailNode.allocatedResources.allocatedPods">
+        </p>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.replicas.$dirty&&!myForm.replicas.$valid}">
+      <label class="col-lg-3 control-label">pod配额：</label>
+      <div class="col-lg-9">
+        <p class="form-control static" ng-bind="detailNode.allocatedResources.podCapacity">
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="col-lg-3 control-label">标签：</label>
+      <div class="col-lg-9">
+        <div class="col-lg-12" ng-class="{'has-error':myForm.app_value.$dirty&&!myForm.app_value.$valid}">
+          <label class="col-lg-6 control-label">beta.kubernetes.io/arch：</label>
+          <div class="col-lg-6">
+            <p class="form-control static" ng-bind="detailNode.objectMeta.labels['beta.kubernetes.io/arch']">
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-12 m-t-xs" ng-class="{'has-error':myForm.version_value.$dirty&&!myForm.version_value.$valid}">
+          <label class="col-lg-6 control-label">beta.kubernetes.io/os：</label>
+          <div class="col-lg-6">
+            <p class="form-control static" ng-bind="detailNode.objectMeta.labels['beta.kubernetes.io/os']">
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-12 m-t-xs" ng-class="{'has-error':myForm.version_value.$dirty&&!myForm.version_value.$valid}">
+          <label class="col-lg-6 control-label">kubernetes.io/hostname：</label>
+          <div class="col-lg-6">
+            <p class="form-control static" ng-bind="detailNode.objectMeta.labels['kubernetes.io/hostname']">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error':myForm.variables.$dirty&&!myForm.variables.$valid}">
+      <label class="col-lg-3 control-label">创建时间：</label>
+      <div class="col-lg-9">
+        <p class="form-control static" ng-bind="detailNode.objectMeta.creationTimestamp">
+        </p>
+      </div>
+    </div>
+
+
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-default" ng-click="detailNode.cancel()">关闭</button>
+</div>

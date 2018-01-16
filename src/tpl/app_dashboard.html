@@ -1,0 +1,170 @@
+<div class="hbox hbox-auto-xs hbox-auto-sm" ng-init="
+app.settings.asideFolded = false;
+app.settings.asideDock = false;
+">
+<!-- main -->
+<div class="col">
+  <!-- main header -->
+  <div class="bg-light lter b-b wrapper-md">
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <h1 class="m-n font-thin h3 text-black">TrueCube</h1>
+        <small class="h4 font-thin">欢迎使用TrueCube!</small>
+      </div>
+      <div class="col-sm-6 text-right hidden-xs">
+        <div class="inline m-r text-left">
+          <div class="m-b-xs">1290 <span class="text-muted">访问</span></div>
+          <div ng-init="data1=[ 106,108,110,105,110,109,105,104,107,109,105,100,105,102,101,99,98 ]"
+          ui-jq="sparkline"
+          ui-options="{{data1}}, {type:'bar', height:20, barWidth:5, barSpacing:1, barColor:'#dce5ec'}"
+          class="sparkline inline">loading...
+        </div>
+      </div>
+      <div class="inline text-left">
+        <div class="m-b-xs">30,000 <span class="text-muted">日志</span></div>
+        <div ng-init="data2=[ 105,102,106,107,105,104,101,99,98,109,105,100,108,110,105,110,109 ]"
+        ui-jq="sparkline"
+        ui-options="{{data2}}, {type:'bar', height:20, barWidth:5, barSpacing:1, barColor:'#dce5ec'}"
+        class="sparkline inline">loading...
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- / main header -->
+<div class="wrapper-md" ng-controller="FlotChartDemoCtrl">
+  <!-- stats -->
+  <div class="row">
+    <div class="col-md-5">
+      <div class="row row-sm text-center">
+
+        <div class="col-xs-6">
+            <a  class="block panel padder-v bg-info  item" ui-sref="app.spaceslist">
+              <span class="text-white font-thin h1 block ng-binding">18/50</span>
+              <span class="text-muted text-xs">应用</span>
+              <span class="bottom text-right w-full">
+                <i class="fa fa-cubes text-muted m-r-sm"></i>
+              </span>
+            </a>
+        </div>
+
+        <div class="col-xs-6">
+            <a  class="block panel padder-v bg-primary item" ui-sref="app.projectslist">
+              <span class="text-white font-thin h1 block ng-binding">5/10</span>
+              <span class="text-muted text-xs">镜像</span>
+              <span class="bottom text-right w-full">
+                <i class="fa  fa-files-o text-muted m-r-sm"></i>
+              </span>
+            </a>
+        </div>
+
+
+
+        <div class="col-xs-6">
+            <a  class="block panel padder-v bg-success item">
+              <span class="text-white font-thin h1 block ng-binding">18/50</span>
+              <span class="text-muted text-xs">容器</span>
+              <span class="bottom text-right w-full">
+                <i class="fa  fa-codepen text-muted m-r-sm"></i>
+              </span>
+            </a>
+        </div>
+
+        <div class="col-xs-6">
+            <a  class="block panel padder-v bg-warning item" ui-sref="app.loadbalance">
+              <span class="text-white font-thin h1 block ng-binding">18/50</span>
+              <span class="text-muted text-xs">负载均衡</span>
+              <span class="bottom text-right w-full">
+                <i class="fa  icon-refresh  text-muted m-r-sm"></i>
+              </span>
+            </a>
+        </div>
+
+        <div class="col-xs-12 m-b-md">
+          <div class="r bg-light dker item hbox no-border">
+            <div class="col w-xs v-middle hidden-md">
+              <div ng-init="data1=[28,72]" ui-jq="sparkline" ui-options="{{data1}}, {type:'pie', height:40, sliceColors:['{{app.color.success}}','#fff']}" class="sparkline inline"></div>
+            </div>
+            <div class="col dk padder-v r-r">
+              <div class="text-success-dk font-thin h2"><span>磁盘已使用28GB</span></div>
+              <span class="text-muted text-base">剩余72GB,总共100GB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="panel wrapper">
+        <!-- <label class="i-switch bg-warning pull-right" ng-init="showSpline=true">
+          <input type="checkbox" ng-model="showSpline">
+          <i></i>
+        </label> -->
+        <h4 class="font-thin m-t-none m-b text-muted">资源消耗</h4>
+        <div ui-jq="plot" ui-refresh="" ui-options="
+        [
+        { data: {{d0_1}}, label:'CPU', points: { show: true, radius: 1}, splines: { show: true, tension: 0.45, lineWidth: 1, fill: 0 }},
+        { data: {{d0_2}}, label:'内存', points: { show: true, radius: 1}, splines: { show: true, tension: 0.45, lineWidth: 1, fill: 0 }}
+        ],
+        {
+          colors: ['{{app.color.info}}', '{{app.color.primary}}'],
+          series: { shadowSize: 3 },
+          xaxis:{ font: { color: '#a1a7ac' } },
+          yaxis:{ font: { color: '#a1a7ac' }, max:20 },
+          grid: { hoverable: true, clickable: true, borderWidth: 0, color: '#dce5ec' },
+          tooltip: true,
+          tooltipOpts: { content: 'Visits of %x.1 is %y.4',  defaultTheme: false, shifts: { x: 10, y: -25 } }
+        }
+        " style="height:246px" >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / stats -->
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading font-bold">近七日监控告警16条</div>
+      <div class="panel-body">
+        <div ui-jq="plot" ui-options="
+        [
+        { data: {{notice}}, label: '告警', points: { show: true }, splines: { show: true, tension: 0.45, lineWidth: 1, fill: 0 } },
+        ],
+        {
+          colors: [ '{{app.color.info}}' ],
+          series: { shadowSize: 1 },
+          xaxis:{ font: { color: '#ccc' } },
+          yaxis:{ font: { color: '#ccc' } },
+          grid: { hoverable: true, clickable: true, borderWidth: 0, color: '#ccc' },
+          tooltip: true,
+          tooltipOpts: { content: '第%x.1天%s有%y.4条',  defaultTheme: false, shifts: { x: 0, y: 7 } }
+        }
+        " style="height:240px"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading font-bold">近七日日志量1600条</div>
+      <div class="panel-body">
+        <div ui-jq="plot" ui-options="
+        [
+        { data: {{logs}}, label: '日志', points: { show: true }, splines: { show: true, tension: 0.45, lineWidth: 1, fill: 0 }},
+        ],
+        {
+          colors: [ '{{app.color.info}}' ],
+          series: { shadowSize: 1 },
+          xaxis:{ font: { color: '#ccc' } },
+          yaxis:{ font: { color: '#ccc' } },
+          grid: { hoverable: true, clickable: true, borderWidth: 0, color: '#ccc' },
+          tooltip: true,
+          tooltipOpts: { content: '第%x.1天%s有%y.4条',  defaultTheme: false, shifts: { x: 0, y: 7 } }
+        }
+        " style="height:240px"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- / main -->
+</div>

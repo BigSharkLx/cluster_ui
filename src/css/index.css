@@ -1,0 +1,201 @@
+.fullpage{
+  min-width: 100%;
+}
+.firstpage-tagline{
+  width: 100%;
+}
+@media only screen and (max-width:649px){
+  /*手机设备第一屏*/
+.tagline h1{
+  font-size: 30px;
+}
+.tagline h2 {
+  font-size: 20px;
+}
+  /*手机设备第二屏*/
+.lp-part-2{
+    height: 1000px;
+  }
+.lp-part-2 .lp-block-2 h2{
+  font-size: 28px;
+}
+.lp-part-2 .lp-block-2 .block-p{
+  width: 80%;
+  font-size: 16px!important;
+}
+.p-pom-box-47{
+  width: 100%!important;
+}
+
+/*手机设备第三屏*/
+.lp-part-3{
+  height: 1200px!important;
+}
+.lp-part-3 .lp-books-block-content{
+  padding-top: 20px;
+}
+.lp-part-3 .lp-books-block-content .lp-books-book{
+  width: 100%!important;
+}
+/*手机设备第四屏*/
+.lp-part-4 {
+  padding: 0 10px!important;
+  height: 450px;
+}
+.lp-part-4 .lp-user-block-content .lp-user-avatar,
+.lp-user-avatar img{
+  width: 50px;
+  height: 50px;
+}
+.lp-part-4 .lp-user-block-content .lp-user-thinking{
+  width: 58%;
+}
+.lp-part-4 .lp-user-block-content .lp-user-name{
+  width: 80px;
+}
+/*手机设备第五屏*/
+.lp-part-5 .lp-block-5{
+  width: 90%;
+}
+.lp-part-5 h2{
+  margin-top: 15px;
+  font-size: 18px;
+}
+.lp-part-5 .lp-block-5-button{
+  margin-top: 20px;
+  padding: 10px 25px 10px;
+  font-size: 18px;
+}
+/*手机底部适配*/
+.site-footer {
+  padding-top: 10px;
+  height: 100px;
+}
+.def-footer .help-link{
+  margin: 0!important;
+}
+.list-inline{
+  text-align: center;
+  padding-left: 0;
+  margin-left: 0;
+}
+.list-inline>li{
+  padding: 5px 15px;
+}
+.def-footer .copyright-info{
+  margin: 0!important;
+}
+/*导航按钮点击出现样式*/
+.shownav {
+  animation: slideInRight .5s;
+  padding: 0;
+  visibility: visible;
+  background: #fff;
+  right: 0;
+  position: absolute;
+  display: block!important;
+  width: 110px;
+  background: rgba(236, 236, 236, 0.9);
+  text-align: center;
+  height: 450px;
+  box-shadow: 0px 0px 2px #edf1f2;
+}
+.shownav .nav>li {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  display: block;
+}
+.shownav .navbar-nav{
+  margin: 0;
+}
+.shownav .navbar-nav>li>a{
+  padding: 10px 0;
+  width: 95px;
+text-align: center;
+  padding-top: 15px;
+  box-shadow: none;
+}
+@keyframes slideInRight {
+from {
+  transform: translate3d(100%, 0, 0);
+  visibility: visible;
+}
+
+to {
+  transform: translate3d(0, 0, 0);
+}
+}
+}
+@media only screen and (max-width:959px) {
+  /*平板适配第一屏*/
+.tagline h2 {
+  width: 76%;
+  margin: 0 auto;
+}
+/*平板适配第二屏*/
+.lp-part-2{
+  min-width: 100%;
+}
+
+.lp-part-2 .lp-block-2{
+  width: 100%;
+}
+.lp-part-2 .lp-block-2 .block-p{
+  font-size: 18px;
+}
+.p-pom-box-47{
+  width: 33.3333%;
+  margin-left: 0;
+}
+.p-pom-box-47 p{
+  width: 78%;
+  margin: 0 auto;
+  font-size: 16px;
+}
+/*平板适配第三屏*/
+.lp-part-3{
+  min-width: 100%;
+  height: 620px;
+}
+.lp-part-3 .lp-books-block-content{
+  width: 100%;
+}
+.lp-books-all-books{
+  width:100%!important;
+}
+.lp-part-3 .lp-books-block-content .lp-books-book{
+  width: 33.3333%;
+  margin: 0 auto;
+  height: 180px;
+  text-align: center;
+}
+/*平板适配第四屏*/
+.lp-part-4{
+  min-width: 100%;
+  padding: 0 50px;
+}
+.lp-part-4 .lp-user-block-content{
+  width: 100%;
+}
+.lp-part-4 .lp-user-block-content .lp-user-left, .lp-part-4 .lp-user-block-content .lp-user-right{
+  width: 100%;
+}
+.lp-part-4 .lp-user-block-content .lp-user-name{
+  width: 90px;
+  text-align: center;
+  margin-left: 0;
+  float: right;
+}
+.lp-part-4 .lp-user-block-content .lp-user-left{
+  padding-right: 0;
+}
+.lp-part-4 .lp-user-block-content .lp-user-right{
+  padding-left: 0;
+}
+/*平板适配第五屏*/
+.lp-part-5{
+  min-width: 100%;
+}
+}

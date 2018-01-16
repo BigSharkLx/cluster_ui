@@ -1,0 +1,35 @@
+{
+  "header": {
+    "GUIDE": "新手引导",
+    "DOCUMENTS": "文档",
+    "MESSAGE": "消息",
+    "user": {
+      "SETTINGS": "个人设置",
+      "PASSWORD": "密码修改",
+      "LOGOUT": "注销"
+    }
+  },
+  "aside": {
+    "nav": {
+      "ORGANIZATION": "组织",
+      "SPACE": "云空间",
+      "service": {
+        "SERVICE": "云服务",
+        "MARKET": "服务市场",
+        "LOGGING": "日志管理",
+        "BIGSHOW": "大屏显示",
+        "MESSAGE": "我的消息",
+        "WORKORDER":"工单系统"
+      }
+    }
+  },
+  "settings": {
+    "SETTINGS": "界面设置",
+    "HEADERFIXED": "顶栏固定",
+    "ASIDEFIXED": "侧边栏固定",
+    "ASIDEFOLDED": "侧边栏收起",
+    "ASIDEDOCK": "侧边栏Dock化",
+    "CONTAINER": "容器布局"
+  }
+}
+
